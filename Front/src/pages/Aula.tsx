@@ -1,7 +1,5 @@
 import { useState } from "react";
-import ReactHlsPlayer from "react-hls-player";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles.css";
+import HLSPlayer from '../components/HLSPlayer';
 
 export default function App() {
   const [hlsUrl, setHlsUrl] = useState(
@@ -19,13 +17,7 @@ export default function App() {
         aria-describedby="set-hls-url"
         onChange={(e) => setHlsUrl(e.target.value)}
       />
-      <ReactHlsPlayer
-        src={hlsUrl}
-        autoPlay={false}
-        controls={true}
-        width="60%"
-        height="auto"
-      />
+      <HLSPlayer url={hlsUrl} />
     </div>
   );
 }
