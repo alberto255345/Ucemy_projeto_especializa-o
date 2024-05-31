@@ -19,10 +19,10 @@ import Aula from "./pages/Aula";
 const element = createRoutesFromElements(
     <>
     <Route path="*" element={<ErrorPage />} />
-    <Route path="/" element={<LoginPage />} />
+    <Route path="/login" element={<LoginPage />} />
     <Route path="/register" element={<RegisterPage />} />
     <Route element={<Layout />}>
-        <Route index path="/homepage" element={<HomePage />} />
+        <Route index path="/" element={<HomePage />} />
         <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<Product />} />
         <Route path="aula" element={<Aula />} />

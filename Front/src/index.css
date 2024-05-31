@@ -9,3 +9,13 @@
 .w-90 {
   width: 90%;
 }
+
+.color_default {
+  background-color: #242e34ee;
+  border-bottom: 6px solid #5F5CE7;
+}
+
+.color_default_separador {
+  background-color: #242e34ee;
+  border-bottom: 2px solid #343E43;
+}

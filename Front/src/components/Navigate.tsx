@@ -1,50 +1,51 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from '../assets/Ucemy.svg?react';
 
 export default function Navigate(): JSX.Element {
   // const navigate = useNavigate();
 
   return (
-    <nav className="bg-gray-200 p-4">
+    <nav className="bg-gray-200 p-4 color_default">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="/homepage" className="text-xl font-bold">
-          @Shoes Store
+        <a href="/" className="text-xl font-bold">
+          <Logo width={140} height={37} />
         </a>
         <div className="lg:flex lg:items-center lg:space-x-4 hidden">
           <NavLink
             key={1}
             className={({ isActive, isPending }) =>
               isPending
-                ? "text-gray-500"
+                ? "text-gray-50"
                 : isActive
-                ? "text-blue-500 font-semibold"
-                : "text-gray-700"
+                ? "text-white font-semibold"
+                : "text-gray-200"
             }
-            to="/homepage"
+            to="/"
           >
-            Homepage
+            Início
           </NavLink>
           <NavLink
             key={2}
             className={({ isActive, isPending }) =>
               isPending
-                ? "text-gray-500"
-                : isActive
-                ? "text-blue-500 font-semibold"
-                : "text-gray-700"
+              ? "text-gray-50"
+              : isActive
+              ? "text-white font-semibold"
+              : "text-gray-200"
             }
             to="/products"
           >
-            Products
+            Meus Cursos
           </NavLink>
           <NavLink
             key={3}
             className={({ isActive, isPending }) =>
               isPending
-                ? "text-gray-500"
-                : isActive
-                ? "text-blue-500 font-semibold"
-                : "text-gray-700"
+              ? "text-gray-50"
+              : isActive
+              ? "text-white font-semibold"
+              : "text-gray-200"
             }
             to="/Aula"
           >
